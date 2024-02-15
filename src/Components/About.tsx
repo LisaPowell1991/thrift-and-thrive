@@ -1,73 +1,156 @@
 import React from 'react';
 import '../assets/styles/App.css';
+import heroImage from '../assets/images/about-hero1.png';
 
 const About = () => {
     return (
-        <div className="content">
-            <section className="hero is-fullheight-with-navbar">
-                <div className="hero-body">
-                    <div className="container has-text-centered">
-                        <h1 className="title">About Us</h1>
-                        <div className="hero-image">
-                            <img
-                                src="src\assets\images\2nd-hand-fashion-style.jpg"
-                                alt="Hero"
-                            />
-                        </div>
-                    </div>
+        <>
+            <>
+                <div className="hero-image">
+                    <img src={heroImage} alt="Hero" />
                 </div>
-            </section>
-            <div className="container">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Integer nec odio. Praesent libero. Sed cursus ante dapibus
-                    diam. Sed nisi. Lorem, ipsum dolor sit amet consectetur
-                    adipisicing elit. Nihil praesentium autem alias ducimus
-                    dolorum voluptatum inventore expedita quisquam nam eius
-                    corrupti, accusantium quis aperiam, esse porro assumenda,
-                    adipisci deserunt dolorem! Aut, est quis quam impedit iure
-                    vero aperiam dolores earum sunt obcaecati? Nisi culpa quae
-                    officia sequi fugit, laborum quis optio repellendus vero
-                    ipsum minima? Consectetur architecto veritatis recusandae
-                    sunt! Magnam eveniet modi soluta repellendus, nam architecto
-                    a impedit eius cum rem possimus amet recusandae quo
-                    distinctio quis omnis atque ut, voluptate deserunt veniam
-                    sed asperiores ipsum incidunt obcaecati. Accusantium.
-                    Mollitia voluptatum doloremque esse. Earum rerum quo
-                    possimus exercitationem corporis repellat! Ipsum aut quo
-                    magni commodi inventore, aspernatur iusto accusantium error
-                    modi voluptates, ullam quibusdam illum perferendis tempora
-                    nulla voluptate. Doloribus quam optio itaque ut magni
-                    similique molestias perspiciatis neque ipsam tempore,
-                    inventore assumenda quibusdam illum ratione voluptatem
-                    labore repellat explicabo totam ducimus, officiis error
-                    obcaecati iusto odio. Eius, voluptatem.
-                </p>
-            </div>
-            <div className="row">
-                {Array.from({ length: 3 }).map((_, index) => (
-                    <div className="col-sm-4" key={index}>
+            </>
+            <div className="content">
+                <div className="container">
+                    <p>
+                        Welcome to Thrift and Thrive, where second-hand
+                        treasures meet thrifty enthusiasts! Founded by the
+                        ever-savvy Lisa Powell-Kuyk, our platform is a haven for
+                        those who appreciate the art of thrifting without
+                        breaking the bank.
+                    </p>
+                    <p>
+                        So, why did I dive headfirst into the world of online
+                        thrifting? Well, let's just say I am a self-proclaimed
+                        "thrifter" extraordinaire. Well, it's simple really. As
+                        a self-proclaimed "thrifter" extraordinaire, I know the
+                        thrill of scoring fantastic second-hand finds that won't
+                        leave you penniless. Who needs to sacrifice an arm and a
+                        leg for quality when you can find hidden gems at bargain
+                        prices?
+                    </p>
+                    <p>
+                        With this passion burning bright, I decided to take
+                        matters into my own hands and create Thrift and Thrive.
+                        But wait, there's a twist! Unlike your typical online
+                        thrift shops. Oh no, we like to do things a little
+                        differently around here.
+                    </p>
+                    <p>
+                        You won't find any fancy carts or pesky payment points
+                        cluttering up your browsing experience. Nope, we keep it
+                        simple yet effective. Our platform serves as a meeting
+                        ground for buyers and sellers to connect directly,
+                        negotiate prices, and seal the deal. It's like the Wild
+                        West of thrifting—minus the tumbleweeds and cowboy hats
+                        (although, we wouldn't mind those either).
+                    </p>
+                    <p>
+                        At Thrift and Thrive, we believe that every item has a
+                        story to tell, and every purchase contributes to a more
+                        sustainable and wallet-friendly lifestyle. So whether
+                        you're on the hunt for vintage threads, quirky home
+                        decor, or one-of-a-kind accessories, saddle up and join
+                        us on this thrifting adventure!
+                    </p>
+                </div>
+                <br />
+                <h4 className="text-center">
+                    <b>
+                        Meet the vibrant minds behind the scenes at Thrift and
+                        Thrive, where passion meets innovation in the world of
+                        thrifting:
+                    </b>
+                    <br></br>
+                    <br />
+                </h4>
+                <div className="row">
+                    <div className="col-sm-4">
                         <div className="card">
                             <img
-                                src="https://picsum.photos/id/237/100"
-                                className="card-img-top"
+                                src="src\assets\images\lisa.jpg"
+                                className="card-img-top mx-auto d-block py-3"
                                 alt="Card image cap"
+                                style={{ height: '300px', width: '300px' }}
                             />
                             <div className="card-body">
-                                <h5 className="card-title">
-                                    Card title {index + 1}
+                                <h5 className="card-title text-center">
+                                    🌟 <b>Lisa Powell-Kuyk:</b>
+                                    <br /> Founder & Frontend Extraordinaire:
                                 </h5>
-                                <p className="card-text">
-                                    Some quick example text to build on the card
-                                    title and make up the bulk of the card's
-                                    content.
+                                <p className="card-text text-center">
+                                    As the visionary force behind Thrift and
+                                    Thrive, Lisa Powell-Kuyk brings her
+                                    boundless creativity and love for thrifting
+                                    to the forefront. With an eye for design and
+                                    a heart for second-hand treasures, Lisa
+                                    leads the charge in crafting an
+                                    unforgettable user experience that
+                                    celebrates thriftiness in all its glory.
+                                    <br />
+                                    <br />
+                                    <br />
                                 </p>
                             </div>
                         </div>
                     </div>
-                ))}
+                    <div className="col-sm-4">
+                        <div className="card">
+                            <img
+                                src="src\assets\images\marike.jpg"
+                                className="card-img-top mx-auto d-block py-3"
+                                alt="Card image cap"
+                                style={{ height: '300px', width: '300px' }}
+                            />
+                            <div className="card-body">
+                                <h5 className="card-title text-center">
+                                    <b>📣 Marike Powell-Taljaard:</b>
+                                    <br /> Marketing and Social Media
+                                    extraordinaire:
+                                </h5>
+                                <p className="card-text text-center">
+                                    Meet Marike Powell-Taljaard, the creative
+                                    genius behind our marketing magic and social
+                                    media sparkle. With her finger firmly on the
+                                    pulse of the latest trends and her knack for
+                                    crafting compelling content, Marike
+                                    captivates our audience and spreads the word
+                                    far and wide about the thrifty treasures
+                                    waiting to be discovered on Thrift and
+                                    Thrive.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-sm-4">
+                        <div className="card">
+                            <img
+                                src="src\assets\images\Warren1.jpg"
+                                className="card-img-top mx-auto d-block py-3"
+                                alt="Card image cap"
+                                style={{ height: '300px', width: '300px' }}
+                            />
+                            <div className="card-body">
+                                <h5 className="card-title text-center">
+                                    <b>🔧 Warren Kuyk:</b>
+                                    <br /> General Manager & Backend Guru:
+                                </h5>
+                                <p className="card-text text-center">
+                                    Warren is the mastermind behind the scenes,
+                                    ensuring that everything runs smoothly on
+                                    the backend of Thrift and Thrive. From
+                                    managing operations to optimizing systems,
+                                    Warren's expertise keeps our platform
+                                    running like a well-oiled machine. With his
+                                    keen attention to detail and problem-solving
+                                    prowess, he's the backbone of our operation.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </>
     );
 };
 export default About;

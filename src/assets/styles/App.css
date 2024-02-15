@@ -6,6 +6,11 @@ body {
     min-height: 100vh;
 }
 
+.carousel-image:not(:hover) {
+    opacity: 0.5;
+    transition: opacity 0.5s ease-in-out;
+}
+
 .content {
     padding: 3em;
 
@@ -16,13 +21,49 @@ body {
 }
 
 .hero-image {
-    background-image: url('../images/thrift-items.png');
+    background-size: cover;
+
 }
 
 .product-cards {
     padding: 2em;
 
 }
+
+.myButton {
+    background-color: #dc3545;
+    ;
+    color: white;
+    border-radius: 1rem;
+    padding: 0.5em 1em;
+    border: none;
+    cursor: pointer;
+}
+
+.seller-info-card {
+    background-color: #f8f9fa;
+    border-color: #333;
+    color: #333;
+}
+
+.seller-info-card .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.seller-info-card .card-text {
+    font-size: 1.2rem;
+}
+
+.padded-card {
+    margin: 2rem;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
 
 .hero.is-medium .hero-body {
     padding: 0;

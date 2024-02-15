@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 
 const Register = () => {
+    const navigate = useNavigate();
     const [registerName, setRegisterName] = useState('');
     const [registerEmail, setRegisterEmail] = useState('');
     const [registerPassword, setRegisterPassword] = useState('');
@@ -16,7 +18,6 @@ const Register = () => {
     };
 
     const handleRegister = async (event: React.FormEvent<HTMLFormElement>) => {
-        console.log('test1');
         event.preventDefault();
         setEmailValid(validateEmail(registerEmail));
         if (
@@ -26,7 +27,6 @@ const Register = () => {
             registerEmail &&
             emailValid
         ) {
-            console.log('test2');
             try {
                 const response = await fetch(
                     'http://localhost:5000/api/register',
@@ -46,11 +46,10 @@ const Register = () => {
                 );
 
                 if (response.ok) {
-                    // Handle successful response
-                    console.log('Form submitted successfully');
+                    alert('Successfully registered!');
+                    navigate('/'); // Redirect to homepage
                 } else {
-                    // Handle error response
-                    console.error('Failed to submit form');
+                    alert('An error occurred while submitting the form');
                 }
             } catch (error) {
                 // Handle network or other errors
@@ -63,69 +62,71 @@ const Register = () => {
     };
 
     return (
-        <Container>
-            <Row>
-                <Col>
-                    <h2>Register</h2>
-                    <Form onSubmit={handleRegister}>
-                        <Form.Group controlId="registerName">
-                            <Form.Label>Name</Form.Label>
-                            <Form.Control
-                                type="text"
-                                placeholder="Enter name"
-                                value={registerName}
-                                onChange={(e) =>
-                                    setRegisterName(e.target.value)
-                                }
-                                required
-                            />
-                        </Form.Group>
-                        <Form.Group controlId="registerSurname">
-                            <Form.Label>Surname</Form.Label>
-                            <Form.Control
-                                type="text"
-                                placeholder="Enter surname"
-                                value={registerSurname}
-                                onChange={(e) =>
-                                    setRegisterSurname(e.target.value)
-                                }
-                                required
-                            />
-                        </Form.Group>
+        <div className="content">
+            <Container>
+                <Row>
+                    <Col>
+                        <h2>Register</h2>
+                        <Form onSubmit={handleRegister}>
+                            <Form.Group controlId="registerName">
+                                <Form.Label>Name</Form.Label>
+                                <Form.Control
+                                    type="text"
+                                    placeholder="Enter name"
+                                    value={registerName}
+                                    onChange={(e) =>
+                                        setRegisterName(e.target.value)
+                                    }
+                                    required
+                                />
+                            </Form.Group>
+                            <Form.Group controlId="registerSurname">
+                                <Form.Label>Surname</Form.Label>
+                                <Form.Control
+                                    type="text"
+                                    placeholder="Enter surname"
+                                    value={registerSurname}
+                                    onChange={(e) =>
+                                        setRegisterSurname(e.target.value)
+                                    }
+                                    required
+                                />
+                            </Form.Group>
 
-                        <Form.Group controlId="registerEmail">
-                            <Form.Label>Email address</Form.Label>
-                            <Form.Control
-                                type="email"
-                                placeholder="Enter email"
-                                value={registerEmail}
-                                onChange={(e) =>
-                                    setRegisterEmail(e.target.value)
-                                }
-                                required
-                            />
-                        </Form.Group>
+                            <Form.Group controlId="registerEmail">
+                                <Form.Label>Email address</Form.Label>
+                                <Form.Control
+                                    type="email"
+                                    placeholder="Enter email"
+                                    value={registerEmail}
+                                    onChange={(e) =>
+                                        setRegisterEmail(e.target.value)
+                                    }
+                                    required
+                                />
+                            </Form.Group>
 
-                        <Form.Group controlId="registerPassword">
-                            <Form.Label>Password</Form.Label>
-                            <Form.Control
-                                type="password"
-                                placeholder="Password"
-                                value={registerPassword} // Use registerPassword state variable
-                                onChange={(e) =>
-                                    setRegisterPassword(e.target.value)
-                                }
-                                required
-                            />
-                        </Form.Group>
+                            <Form.Group controlId="registerPassword">
+                                <Form.Label>Password</Form.Label>
+                                <Form.Control
+                                    type="password"
+                                    placeholder="Password"
+                                    value={registerPassword} // Use registerPassword state variable
+                                    onChange={(e) =>
+                                        setRegisterPassword(e.target.value)
+                                    }
+                                    required
+                                />
+                            </Form.Group>
 
-                        <Button variant="primary" type="submit">
-                            Register
-                        </Button>
-                    </Form>
-                </Col>
-            </Row>
-        </Container>
+                            <Button variant="primary" type="submit">
+                                Register
+                            </Button>
+                        </Form>
+                    </Col>
+                </Row>
+            </Container>
+        </div>
     );
 };
 

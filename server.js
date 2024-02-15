@@ -85,12 +85,12 @@ app.post('/api/product/', (req, res) => {
     const currentDate = new Date().toISOString().slice(0, 19).replace('T', ' ');
     // Insert the new product into the database
     connection.query(
-        'INSERT INTO products (product_name, product_description, product_price, product_img_url, product_date_created) VALUES (?, ?, ?, ?, ?)',
-        [body.listing, body.description, parseFloat(body.price), body.imageUrl, currentDate],
+        'INSERT INTO products (product_name, product_description, product_price, product_img_url, product_date_created, product_ref_user) VALUES (?, ?, ?, ?, ?, ?)',
+        [body.listing, body.description, parseFloat(body.price), body.imageUrl, currentDate, body.userId],
         (error, results) => {
             if (error) {
                 console.error(error);
-                res.status(500).json({ error: 'An error occurred while adding the product.' });
+                return res.status(500).json({ error: 'An error occurred while adding the product.' });
             } else {
                 res.status(201).json({ message: 'Product added successfully.' });
             }
@@ -142,25 +142,15 @@ app.post('/api/login', (req, res) => {
     const password = req.body.password;
 
     if (!username || !password) {
-        return res.status(400).send('Invalid credentials');
+        return res.status(400).json({ message: 'Invalid credentials' });
     }
     connection.query('SELECT * FROM users WHERE user_email = ? AND user_password = ?', [username, password], (err, results) => {
-        if (err) {
-            console.error('Error executing query:', err);
-            return res.status(400).send('Invalid credentials');
+        if (err || !results.length) {
+            return res.status(400).json({ message: 'Invalid credentials' });
         }
         // Return all users from the database
-        res.status(200).json({ message: 'Login successful', body: results[0] });
+        res.status(200).json({ user: results[0] });
     });
-    // const rows = connection.query('SELECT * FROM users WHERE user_email = ? AND user_password = ?', [username, password]);
-    // console.log(rows);
-    // if (rows.length === 0) {
-    //     return res.status(400).send('Invalid credentials');
-    // }
-
-    // const user = rows[0];
-
-    // res.status(200).json({ message: 'Login successful', user });
 });
 
 app.post('/api/register', (req, res) => {
@@ -184,6 +174,23 @@ app.post('/api/register', (req, res) => {
                 res.status(201).json({ message: 'User registered successfully.' });
             }
         });
+});
+app.get('/api/user/:userId', (req, res) => {
+    const userId = req.params.userId;
+    const query = `
+        SELECT *
+        FROM users
+        WHERE user_id = ?;
+    `;
+
+    connection.query(query, [userId], (error, results) => {
+        if (error) {
+            console.error(error);
+            res.status(500).json({ error: 'An error occurred while fetching user details.' });
+        } else {
+            res.status(200).json(results[0]);
+        }
+    });
 });
 
 // Serve static files from the React app
