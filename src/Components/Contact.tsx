@@ -13,6 +13,7 @@ const Contact = () => {
         setEmailValid(validateEmail(email));
         if (name && surname && email && comment && emailValid) {
             // Submit form
+            alert('Form submitted successfully');
         }
     };
 
