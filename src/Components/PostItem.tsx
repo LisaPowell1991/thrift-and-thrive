@@ -17,7 +17,11 @@ const PostItem = () => {
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         try {
-            const response = await fetch('http://localhost:5000/api/product', {
+            const hostname = window.location.hostname;
+            const baseUrl =
+                hostname === 'localhost' ? 'http://localhost:5000' : '';
+            const url = `${baseUrl}/api/product`;
+            const response = await fetch(url, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

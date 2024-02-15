@@ -25,7 +25,10 @@ let products: Product[] = [];
 
 const fetchProducts = async () => {
     try {
-        const response = await fetch('http://localhost:5000/api/all_products', {
+        const hostname = window.location.hostname;
+        const baseUrl = hostname === 'localhost' ? 'http://localhost:5000' : '';
+        const url = `${baseUrl}/api/all_products`;
+        const response = await fetch(url, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

@@ -30,16 +30,17 @@ const IndividualProductPage = () => {
     const fetchProduct = async () => {
         setIsLoading(true);
         try {
-            const response = await fetch(
-                'http://localhost:5000/api/product/' + productId,
-                {
-                    method: 'GET',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Access-Control-Allow-Origin': '*',
-                    },
-                }
-            );
+            const hostname = window.location.hostname;
+            const baseUrl =
+                hostname === 'localhost' ? 'http://localhost:5000' : '';
+            const url = `${baseUrl}/api/product/${productId}`;
+            const response = await fetch(url, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': '*',
+                },
+            });
 
             if (!response.ok) {
                 setIsLoading(false);
@@ -55,19 +56,19 @@ const IndividualProductPage = () => {
     };
     const [product, setProduct] = useState<Product | null>(null);
     const [user, setUser] = useState<User | null>(null);
-    const fetchUser = async (user: any) => {
+    const fetchUser = async (userId: any) => {
+        const hostname = window.location.hostname;
+        const baseUrl = hostname === 'localhost' ? 'http://localhost:5000' : '';
+        const url = `${baseUrl}/api/user/${userId}`;
         setIsLoading(true);
         try {
-            const response = await fetch(
-                'http://localhost:5000/api/user/' + user,
-                {
-                    method: 'GET',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Access-Control-Allow-Origin': '*',
-                    },
-                }
-            );
+            const response = await fetch(url, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': '*',
+                },
+            });
 
             if (!response.ok) {
                 setIsLoading(false);

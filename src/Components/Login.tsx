@@ -15,7 +15,10 @@ const LoginPage = () => {
     const handleLogin = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         // Handle login
-        const response = await fetch('http://localhost:5000/api/login', {
+        const hostname = window.location.hostname;
+        const baseUrl = hostname === 'localhost' ? 'http://localhost:5000' : '';
+        const url = `${baseUrl}/api/login`;
+        const response = await fetch(url, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

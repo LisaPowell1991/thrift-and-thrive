@@ -28,22 +28,23 @@ const Register = () => {
             emailValid
         ) {
             try {
-                const response = await fetch(
-                    'http://localhost:5000/api/register',
-                    {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json',
-                            'Access-Control-Allow-Origin': '*',
-                        },
-                        body: JSON.stringify({
-                            registerName,
-                            registerSurname,
-                            registerEmail,
-                            registerPassword,
-                        }),
-                    }
-                );
+                const hostname = window.location.hostname;
+                const baseUrl =
+                    hostname === 'localhost' ? 'http://localhost:5000' : '';
+                const url = `${baseUrl}/api/register`;
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*',
+                    },
+                    body: JSON.stringify({
+                        registerName,
+                        registerSurname,
+                        registerEmail,
+                        registerPassword,
+                    }),
+                });
 
                 if (response.ok) {
                     alert('Successfully registered!');
