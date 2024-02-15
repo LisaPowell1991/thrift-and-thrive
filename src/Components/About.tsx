@@ -1,6 +1,9 @@
 import React from 'react';
 import '../assets/styles/App.css';
 import heroImage from '../assets/images/about-hero1.png';
+import lisaImage from '../assets/images/lisa.jpg';
+import marikeImage from '../assets/images/marike.jpg';
+import warrenImage from '../assets/images/Warren1.jpg';
 
 const About = () => {
     return (
@@ -68,7 +71,7 @@ const About = () => {
                     <div className="col-sm-4">
                         <div className="card">
                             <img
-                                src="src\assets\images\lisa.jpg"
+                                src={lisaImage}
                                 className="card-img-top mx-auto d-block py-3"
                                 alt="Card image cap"
                                 style={{ height: '300px', width: '300px' }}
@@ -97,7 +100,7 @@ const About = () => {
                     <div className="col-sm-4">
                         <div className="card">
                             <img
-                                src="src\assets\images\marike.jpg"
+                                src={marikeImage}
                                 className="card-img-top mx-auto d-block py-3"
                                 alt="Card image cap"
                                 style={{ height: '300px', width: '300px' }}
@@ -125,7 +128,7 @@ const About = () => {
                     <div className="col-sm-4">
                         <div className="card">
                             <img
-                                src="src\assets\images\Warren1.jpg"
+                                src={warrenImage}
                                 className="card-img-top mx-auto d-block py-3"
                                 alt="Card image cap"
                                 style={{ height: '300px', width: '300px' }}
