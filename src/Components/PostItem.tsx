@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import '../assets/styles/App.css';
+import postImage from '../assets/images/thrift-items.png';
 import { UserSessionContext } from './UserSessionContext';
 
 const PostItem = () => {
@@ -55,12 +56,8 @@ const PostItem = () => {
             <section className="hero is-medium">
                 <div className="hero-body">
                     <div className="container has-text-centered">
-                        <h1 className="title">Post Item</h1>
                         <div className="hero-image">
-                            <img
-                                src="src\assets\images\thrift-items.png"
-                                alt="Hero"
-                            />
+                            <img src={postImage} alt="Hero" />
                         </div>
                     </div>
                 </div>

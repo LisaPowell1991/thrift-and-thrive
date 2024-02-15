@@ -1,8 +1,7 @@
 import Carousel from 'react-bootstrap/Carousel';
 import Button from 'react-bootstrap/Button';
 import '../assets/styles/App.css';
-
-import heroImage from '../assets/images/hero-home.png';
+import heroImage from '../assets/images/homepage.png';
 
 export default function Home() {
     return (
