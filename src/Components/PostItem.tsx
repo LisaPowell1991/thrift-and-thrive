@@ -38,7 +38,7 @@ const PostItem = () => {
                 navigate('/products'); // Redirect to homepage
             } else {
                 // Handle error response
-                console.error('Failed to submit form');
+                alert('Failed to submit form');
             }
         } catch (error) {
             // Handle network or other errors
