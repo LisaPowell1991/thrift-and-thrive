@@ -15,28 +15,30 @@ These instructions will get you a copy of the project up and running on your loc
 - React
 - MySQL
 
-🔧 **Installing** 
+🔧 ## Installation
 
-#### 1. Clone the repo:
-git clone https://github.com/LisaPowell1991/thrift-and-thrive.git
+** 1. Clone the repo: **
+``` git clone https://github.com/LisaPowell1991/thrift-and-thrive.git```
 
-#### 2. Install NPM packages 
-npm install
+** 2. Install NPM packages **
+```npm install```
 
-#### 3. Start the backend server 
-npm run serve
+** 3. Start the backend server ** 
+```npm run serve```
 
-#### 4. Start the frontend 
-npm run dev 
+** 4. Start the frontend **
+```npm run dev``` 
 
-
-🚀 **For Production:**
+🚀 ## For Production:
 1. npm run build
 2. Copy all dist files to public_html (or depending on the way your server is setup)
 3. npm run serve to start up MySQL and API
 
-🤝 **Contributing**
-My husband, Warren Kuyk, helped a lot with setting up the backend of Thrift and Thrive.
+## Usage ℹ️
+- Describe how to use the application here...
+
+## Contributing 🤝
+Contributions are welcome! My husband, Warren Kuyk, helped a lot with setting up the backend of Thrift and Thrive.
 
 ## Related Projects 🌐
 I took a lot of inspiration out of other websites like:
@@ -44,7 +46,7 @@ I took a lot of inspiration out of other websites like:
 - Thriftersuniverse: [thriftersuniverse](https://thriftersuniverse.co.za)
 
 ## Licensing 📝
-MIT License
+This project is licensed under the MIT License
 
 ## Project Information ℹ️
 - **Project Name:** Thrift and Thrive
