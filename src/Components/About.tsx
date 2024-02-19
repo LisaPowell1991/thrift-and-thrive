@@ -1,20 +1,26 @@
+// Importing necessary libraries and styles
 import React from 'react';
 import '../assets/styles/App.css';
+
+// Importing images
 import heroImage from '../assets/images/about-hero1.png';
 import lisaImage from '../assets/images/lisa.jpg';
 import marikeImage from '../assets/images/marike.jpg';
 import warrenImage from '../assets/images/Warren1.jpg';
 
+// About component
 const About = () => {
     return (
         <>
-            <>
-                <div className="hero-image">
-                    <img src={heroImage} alt="Hero" />
-                </div>
-            </>
+            {/* Hero Image */}
+            <div className="hero-image">
+                <img src={heroImage} alt="Hero" />
+            </div>
+
+            {/* Content */}
             <div className="content">
                 <div className="container">
+                    {/* Introduction */}
                     <p>
                         Welcome to Thrift and Thrive, where second-hand
                         treasures meet thrifty enthusiasts! Founded by the
@@ -22,6 +28,7 @@ const About = () => {
                         those who appreciate the art of thrifting without
                         breaking the bank.
                     </p>
+                    {/* More about the platform */}
                     <p>
                         So, why did I dive headfirst into the world of online
                         thrifting? Well, let's just say I am a self-proclaimed
@@ -32,6 +39,7 @@ const About = () => {
                         leg for quality when you can find hidden gems at bargain
                         prices?
                     </p>
+                    {/* Unique selling points */}
                     <p>
                         With this passion burning bright, I decided to take
                         matters into my own hands and create Thrift and Thrive.
@@ -39,6 +47,7 @@ const About = () => {
                         thrift shops. Oh no, we like to do things a little
                         differently around here.
                     </p>
+                    {/* How the platform works */}
                     <p>
                         You won't find any fancy carts or pesky payment points
                         cluttering up your browsing experience. Nope, we keep it
@@ -48,6 +57,7 @@ const About = () => {
                         West of thrifting—minus the tumbleweeds and cowboy hats
                         (although, we wouldn't mind those either).
                     </p>
+                    {/* Conclusion */}
                     <p>
                         At Thrift and Thrive, we believe that every item has a
                         story to tell, and every purchase contributes to a more
@@ -57,6 +67,8 @@ const About = () => {
                         us on this thrifting adventure!
                     </p>
                 </div>
+
+                {/* Team introduction */}
                 <br />
                 <h4 className="text-center">
                     <b>
@@ -64,16 +76,19 @@ const About = () => {
                         Thrive, where passion meets innovation in the world of
                         thrifting:
                     </b>
-                    <br></br>
+                    <br />
                     <br />
                 </h4>
+
+                {/* Team members */}
                 <div className="row">
+                    {/* Lisa */}
                     <div className="col-sm-4">
                         <div className="card">
                             <img
                                 src={lisaImage}
                                 className="card-img-top mx-auto d-block py-3"
-                                alt="Card image cap"
+                                alt="Lisa"
                                 style={{ height: '300px', width: '300px' }}
                             />
                             <div className="card-body">
@@ -97,12 +112,14 @@ const About = () => {
                             </div>
                         </div>
                     </div>
+
+                    {/* Marike */}
                     <div className="col-sm-4">
                         <div className="card">
                             <img
                                 src={marikeImage}
                                 className="card-img-top mx-auto d-block py-3"
-                                alt="Card image cap"
+                                alt="Marike"
                                 style={{ height: '300px', width: '300px' }}
                             />
                             <div className="card-body">
@@ -125,12 +142,14 @@ const About = () => {
                             </div>
                         </div>
                     </div>
+
+                    {/* Warren */}
                     <div className="col-sm-4">
                         <div className="card">
                             <img
                                 src={warrenImage}
                                 className="card-img-top mx-auto d-block py-3"
-                                alt="Card image cap"
+                                alt="Warren"
                                 style={{ height: '300px', width: '300px' }}
                             />
                             <div className="card-body">
@@ -156,4 +175,6 @@ const About = () => {
         </>
     );
 };
+
+// Exporting the About component
 export default About;

@@ -12,6 +12,7 @@ import {
     Button,
 } from 'react-bootstrap';
 
+// Define Product interface
 interface Product {
     product_id: number;
     product_name: string;
@@ -20,9 +21,7 @@ interface Product {
     product_img_url: string;
 }
 
-let products: Product[] = [];
-// const [products, setProducts] = useState<Product[]>([]);
-
+// Function to fetch products from API
 const fetchProducts = async () => {
     try {
         const hostname = window.location.hostname;
@@ -42,7 +41,6 @@ const fetchProducts = async () => {
 
         const fetchedProducts = await response.json();
         return fetchedProducts;
-        // setProducts(fetchedProducts);
     } catch (error) {
         console.error('There was an error!', error);
     }
@@ -50,26 +48,35 @@ const fetchProducts = async () => {
 
 const ProductPage = () => {
     const navigate = useNavigate();
-    const [products, setProducts] = useState<Product[] | []>([]);
+    const [products, setProducts] = useState<Product[]>([]);
+    const [searchTerm, setSearchTerm] = useState('');
+    const [selectedProduct, setSelectedProduct] = useState<Product | null>(
+        null
+    );
+
+    // Fetch products when component mounts
     useEffect(() => {
         fetchProducts().then((fetchedProducts) => {
             setProducts(fetchedProducts);
         });
     }, []);
-    const [searchTerm, setSearchTerm] = useState('');
-    const [selectedProduct, setSelectedProduct] = useState<Product | []>([]);
+
+    // Function to handle product click
     const handleProductClick = (product: Product) => {
         setSelectedProduct(product);
         navigate(`/product/${product.product_id}`);
     };
 
+    // Function to handle search term change
     const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setSearchTerm(event.target.value);
     };
 
+    // Filter products based on search term
     const filteredProducts = products.filter((product) =>
         product.product_name.toLowerCase().includes(searchTerm.toLowerCase())
     );
+
     return (
         <div className="content">
             <Container>

@@ -1,23 +1,30 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { UserSessionContext } from './UserSessionContext';
 import { useNavigate } from 'react-router-dom';
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 import '../assets/styles/App.css';
 
 const LoginPage = () => {
-    const navigate = useNavigate();
+    // Define state variables for login email and password
     const [loginEmail, setLoginEmail] = useState('');
     const [loginPassword, setLoginPassword] = useState('');
-    // const userSessionContext = React.useContext(UserSessionContext);
 
+    // Get navigate function from react-router-dom
+    const navigate = useNavigate();
+
+    // Get setUserSession function from UserSessionContext
     const { setUserSession } = React.useContext(UserSessionContext) || {};
 
+    // Function to handle login form submission
     const handleLogin = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        // Handle login
+
+        // Define base URL based on hostname
         const hostname = window.location.hostname;
         const baseUrl = hostname === 'localhost' ? 'http://localhost:5000' : '';
         const url = `${baseUrl}/api/login`;
+
+        // Send POST request to login API
         const response = await fetch(url, {
             method: 'POST',
             headers: {
@@ -30,55 +37,69 @@ const LoginPage = () => {
             }),
         });
 
+        // Parse response data
         const data = await response.json();
+
+        // If login is successful, set user session and redirect to homepage
         if (response.ok) {
             alert('Successfully logged in!');
             if (setUserSession) {
-                setUserSession(data); // Use setUserSession directly
+                setUserSession(data);
             }
-            navigate('/'); // Redirect to homepage
+            navigate('/');
         } else {
+            // If login fails, show error message
             alert(`Failed to log in: ${data.message}`);
         }
     };
 
+    // Render login form
     return (
         <div className="content">
             <Container>
-                <Row>
-                    <Col>
-                        <h2>Login</h2>
-                        <Form onSubmit={handleLogin}>
-                            <Form.Group controlId="loginEmail">
-                                <Form.Label>Email address</Form.Label>
-                                <Form.Control
-                                    type="email"
-                                    placeholder="Enter email"
-                                    value={loginEmail}
-                                    onChange={(e) =>
-                                        setLoginEmail(e.target.value)
-                                    }
-                                    required
-                                />
-                            </Form.Group>
+                <Row className="justify-content-md-center">
+                    <Col xs={12} md={6}>
+                        <div className="border p-4 rounded">
+                            <h1 className="text-center">Login</h1>
+                            <Form
+                                onSubmit={handleLogin}
+                                className="submit-form"
+                            >
+                                <Form.Group controlId="loginEmail">
+                                    <Form.Label>Email address</Form.Label>
+                                    <Form.Control
+                                        type="email"
+                                        placeholder="Enter email"
+                                        value={loginEmail}
+                                        onChange={(e) =>
+                                            setLoginEmail(e.target.value)
+                                        }
+                                        required
+                                    />
+                                </Form.Group>
 
-                            <Form.Group controlId="loginPassword">
-                                <Form.Label>Password</Form.Label>
-                                <Form.Control
-                                    type="password"
-                                    placeholder="Password"
-                                    value={loginPassword}
-                                    onChange={(e) =>
-                                        setLoginPassword(e.target.value)
-                                    }
-                                    required
-                                />
-                            </Form.Group>
+                                <Form.Group controlId="loginPassword">
+                                    <Form.Label>Password</Form.Label>
+                                    <Form.Control
+                                        type="password"
+                                        placeholder="Password"
+                                        value={loginPassword}
+                                        onChange={(e) =>
+                                            setLoginPassword(e.target.value)
+                                        }
+                                        required
+                                    />
+                                </Form.Group>
 
-                            <Button variant="primary" type="submit">
-                                Login
-                            </Button>
-                        </Form>
+                                <Button
+                                    variant="primary"
+                                    type="submit"
+                                    className="form-button mt-3"
+                                >
+                                    Login
+                                </Button>
+                            </Form>
+                        </div>
                     </Col>
                 </Row>
             </Container>

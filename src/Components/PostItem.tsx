@@ -6,22 +6,30 @@ import postImage from '../assets/images/thrift-items.png';
 import { UserSessionContext } from './UserSessionContext';
 
 const PostItem = () => {
-    const navigate = useNavigate();
-    const { userSession, setUserSession } =
-        React.useContext(UserSessionContext) || {};
-    const userId = userSession?.user?.user_id;
+    // Define state variables for form fields
     const [listing, setListing] = useState('');
     const [price, setPrice] = useState('');
     const [description, setDescription] = useState('');
     const [imageUrl, setImageUrl] = useState('');
 
+    // Get navigate function from react-router-dom
+    const navigate = useNavigate();
+
+    // Get user session from UserSessionContext
+    const { userSession } = React.useContext(UserSessionContext) || {};
+    const userId = userSession?.user?.user_id;
+
+    // Function to handle form submission
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
+
+        // Define base URL based on hostname
+        const hostname = window.location.hostname;
+        const baseUrl = hostname === 'localhost' ? 'http://localhost:5000' : '';
+        const url = `${baseUrl}/api/product`;
+
+        // Send POST request to product API
         try {
-            const hostname = window.location.hostname;
-            const baseUrl =
-                hostname === 'localhost' ? 'http://localhost:5000' : '';
-            const url = `${baseUrl}/api/product`;
             const response = await fetch(url, {
                 method: 'POST',
                 headers: {
@@ -37,20 +45,21 @@ const PostItem = () => {
                 }),
             });
 
+            // If request is successful, show success message and redirect to homepage
             if (response.ok) {
-                // Handle successful response
                 alert('Form submitted successfully');
-                navigate('/products'); // Redirect to homepage
+                navigate('/products');
             } else {
-                // Handle error response
+                // If request fails, show error message
                 alert('Failed to submit form');
             }
         } catch (error) {
-            // Handle network or other errors
+            // If network or other error occurs, log error message
             console.error('An error occurred while submitting the form', error);
         }
     };
 
+    // Render form
     return (
         <div className="content">
             <section className="hero is-medium">

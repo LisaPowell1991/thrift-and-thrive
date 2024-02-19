@@ -1,38 +1,42 @@
+/* Importing Bulma CSS framework */
 @import 'bulma/css/bulma.css';
 
+/* Styling for the body element */
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
+/* Styling for carousel images */
 .carousel-image:not(:hover) {
     opacity: 0.5;
     transition: opacity 0.5s ease-in-out;
 }
 
+/* Padding for the content */
 .content {
     padding: 3em;
-
 }
 
+/* Margin for buttons */
 .button {
     margin-top: 2em;
 }
 
+/* Styling for hero images */
 .hero-image {
     background-size: cover;
-
 }
 
+/* Padding for product cards */
 .product-cards {
     padding: 2em;
-
 }
 
+/* Styling for custom button */
 .myButton {
     background-color: #dc3545;
-    ;
     color: white;
     border-radius: 1rem;
     padding: 0.5em 1em;
@@ -40,35 +44,69 @@ body {
     cursor: pointer;
 }
 
+/* Styling for seller info card */
 .seller-info-card {
     background-color: #f8f9fa;
     border-color: #333;
     color: #333;
 }
 
+/* Styling for card title in seller info card */
 .seller-info-card .card-title {
     font-size: 1.5rem;
     font-weight: bold;
 }
 
+/* Styling for card text in seller info card */
 .seller-info-card .card-text {
     font-size: 1.2rem;
 }
 
+/* Margin for padded card */
 .padded-card {
     margin: 2rem;
 }
 
+/* Styling for card content */
 .card-content {
     display: flex;
     flex-direction: row-reverse;
 }
 
-
+/* Styling for medium hero */
 .hero.is-medium .hero-body {
     padding: 0;
 }
 
+/* Margin for footer */
 footer {
     margin-top: 50px;
+}
+
+/* Styling for the form in Contact.css */
+.submit-form {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Styling for the submit button in Contact.css */
+.submit-form button {
+    background-color: #ff4800;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+/* Styling for hover effect on the submit button in Contact.css */
+.submit-form button:hover {
+    background-color: rgb(50, 14, 9);
+    color: rgb(250, 248, 248);
 }

@@ -1,19 +1,21 @@
 import React, { createContext, useState, useEffect } from 'react';
 
-type UserSessionContextType = {
+// Define the shape of the context
+interface UserSessionContextProps {
     userSession: any;
     setUserSession: React.Dispatch<React.SetStateAction<any>>;
-};
+}
 
-export const UserSessionContext = createContext<UserSessionContextType | null>(
+// Create the context with default value as null
+export const UserSessionContext = createContext<UserSessionContextProps | null>(
     null
 );
 
-export const UserSessionProvider = ({
+// Create a provider for the UserSessionContext
+export const UserSessionProvider: React.FC<{ children: React.ReactNode }> = ({
     children,
-}: {
-    children: React.ReactNode;
 }) => {
+    // Define state variable for user session
     const [userSession, setUserSession] = useState<any>(null);
 
     // Load any existing session from localStorage when the component mounts
@@ -33,6 +35,7 @@ export const UserSessionProvider = ({
         }
     }, [userSession]);
 
+    // Provide the context to child components
     return (
         <UserSessionContext.Provider value={{ userSession, setUserSession }}>
             {children}

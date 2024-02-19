@@ -1,87 +1,20 @@
-/* import React from 'react';
-import '../assets/styles/App.css';
-
-const Footer = () => (
-    <footer className="footer mt-auto py-3 bg-light">
-        <div className="container">
-            <div className="row">
-                <div className="col">
-                    <h5>Get to know us</h5>
-                    <ul className="list-unstyled text-small">
-                        <li>
-                            <a className="text-muted" href="/about">
-                                About
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                className="text-muted"
-                                href="https://www.facebook.com"
-                            >
-                                Facebook
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                className="text-muted"
-                                href="https://www.instagram.com"
-                            >
-                                Instagram
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div className="col">
-                    <h5>Legal stuff</h5>
-                    <ul className="list-unstyled text-small">
-                        <li>
-                            <a className="text-muted" href="/terms">
-                                T&C's
-                            </a>
-                        </li>
-                        <li>
-                            <a className="text-muted" href="/privacy">
-                                Privacy Policy
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div className="col">
-                    <h5>Tips and help</h5>
-                    <ul className="list-unstyled text-small">
-                        <li>
-                            <a className="text-muted" href="/contact">
-                                Contact
-                            </a>
-                        </li>
-                        <li>
-                            <a className="text-muted" href="/safety">
-                                Stay Safe
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
-);
-
-export default Footer; */
-
+// Import necessary libraries and components
 import React from 'react';
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'; // Import social media icons
 
+// Footer component
 const Footer = () => (
-    <footer className="footer mt-auto py-3 bg-light">
+    <footer className="footer mt-auto py-3 bg-light relative-bottom">
         <div className="container">
             <div className="row justify-content-center">
                 {' '}
-                {/* Add Bootstrap class for center alignment */}
+                {/* Bootstrap class for center alignment */}
                 <div className="col text-center">
                     {' '}
-                    {/* Add Bootstrap class for center alignment */}
+                    {/* Bootstrap class for center alignment */}
                     <p>Copyright © 2024 Thrift and Thrive</p>
                     <div>
+                        {/* Social media links with respective icons */}
                         <a
                             href="https://github.com/LisaPowell1991/"
                             target="_blank"
@@ -110,4 +43,5 @@ const Footer = () => (
     </footer>
 );
 
+// Export Footer component
 export default Footer;
