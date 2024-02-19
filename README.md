@@ -20,4 +20,4 @@ These instructions will get you a copy of the project up and running on your loc
 1. Clone the repo
 2. Install NPM packages (npm install)
 3. Start the backend server (npm run serve)
-4. Start the frontend (npm run dev) - also you can use vite preview to view the local and network addresses
+4. Start the frontend (npm run dev) - or npm run build and copy all resources in the dist folder for production use
