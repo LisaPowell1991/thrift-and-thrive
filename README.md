@@ -15,7 +15,7 @@ These instructions will get you a copy of the project up and running on your loc
 - React
 - MySQL
 
-🔧 ## Installation
+### 🔧 Installation
 
 ** 1. Clone the repo: **
 ``` git clone https://github.com/LisaPowell1991/thrift-and-thrive.git```
@@ -29,7 +29,7 @@ These instructions will get you a copy of the project up and running on your loc
 ** 4. Start the frontend **
 ```npm run dev``` 
 
-🚀 ## For Production:
+### 🚀 For Production:
 1. npm run build
 2. Copy all dist files to public_html (or depending on the way your server is setup)
 3. npm run serve to start up MySQL and API
