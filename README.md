@@ -1,3 +1,5 @@
+![homepage](https://github.com/LisaPowell1991/thrift-and-thrive/assets/122890181/be534557-d2de-4829-a16f-a8717d007369)
+
 # Thrift and Thrive
 
 Welcome to the Thrift and Thrive repository. This is a thrift shop application built with a React frontend and an Express.js backend. MySQL is used for the database.
