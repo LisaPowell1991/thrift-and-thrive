@@ -53,4 +53,4 @@ This project is licensed under the MIT License
 - **Introduction:** Thrift and Thrive is a thrift shop application built with a React frontend and an Express.js backend, utilizing MySQL for the database. 
 - **Deployed Site:** [Thrift and Thrive Deployed Site](http://34.201.68.14)
 - **Final Project Blog Article:** [Project Blog Article](https://example.com)
-- **Author(s) LinkedIn:** [Author LinkedIn](https://www.linkedin.com/in/lisa-powell-kuyk-5899561b3)
+- **Author(s) LinkedIn:** [Lisa LinkedIn](https://www.linkedin.com/in/lisa-powell-kuyk-5899561b3)
