@@ -4,6 +4,14 @@
 
 Welcome to the Thrift and Thrive repository. This is a thrift shop application built with a React frontend and an Express.js backend. MySQL is used for the database.
 
+## Project Information 📢
+- **Project Name:** Thrift and Thrive
+- **Introduction:** So, why did I dive headfirst into the world of online thrifting? Well, let's just say I am a self-proclaimed "thrifter" extraordinaire. Well, it's simple really. As a self-proclaimed "thrifter" extraordinaire, I know the thrill of scoring fantastic second-hand finds that won't leave you penniless. Who needs to sacrifice an arm and a leg for quality when you can find hidden gems at bargain prices?
+You won't find any fancy carts or pesky payment points cluttering up your browsing experience. Nope, we keep it simple yet effective. Our platform serves as a meeting ground for buyers and sellers to connect directly, negotiate prices, and seal the deal.
+- **Deployed Site:** [Thrift and Thrive Deployed Site](http://34.201.68.14)
+- **Final Project Blog Article:** [Project Blog Article](https://example.com)
+- **Author(s) LinkedIn:** [Lisa LinkedIn](https://www.linkedin.com/in/lisa-powell-kuyk-5899561b3)
+
 ## Getting Started 🚀
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
@@ -36,7 +44,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## Usage 🔍
 #### Step 1: Register
-![Blank diagram (3)](https://github.com/LisaPowell1991/thrift-and-thrive/assets/122890181/d2fd6ee7-6653-460d-9ae8-d1f41f849088)
+![Blank diagram (8)](https://github.com/LisaPowell1991/thrift-and-thrive/assets/122890181/dbbe9d29-ab12-48fe-858a-d61a719f0c7a)
 #### Step 2: Login so you can start posting items you want to sell
 ![Blank diagram (4)](https://github.com/LisaPowell1991/thrift-and-thrive/assets/122890181/440f1000-0744-4541-b0af-491372769574)
 #### Step 3: Post item by completing the form with details of the product: 
@@ -57,10 +65,3 @@ I took a lot of inspiration out of other websites like:
 
 ## Licensing 📝
 This project is licensed under the MIT License
-
-## Project Information ℹ️
-- **Project Name:** Thrift and Thrive
-- **Introduction:** Thrift and Thrive is a thrift shop application built with a React frontend and an Express.js backend, utilizing MySQL for the database. 
-- **Deployed Site:** [Thrift and Thrive Deployed Site](http://34.201.68.14)
-- **Final Project Blog Article:** [Project Blog Article](https://example.com)
-- **Author(s) LinkedIn:** [Lisa LinkedIn](https://www.linkedin.com/in/lisa-powell-kuyk-5899561b3)
