@@ -47,6 +47,7 @@ Depending on the environment, the npm run serve might have an issue, in that cas
 1. rm -rf node_modules
 2. rm package-lock.json
 3. run npm install again.
+
 This will ensure that node is catering for the relevant environment (windows / linux)
 
 ## Usage 🔍
