@@ -35,14 +35,20 @@ These instructions will get you a copy of the project up and running on your loc
 3. npm run serve to start up MySQL and API
 
 ## Usage 🔍
-**Step 1: Register**
-![Blank diagram (1)](https://github.com/LisaPowell1991/thrift-and-thrive/assets/122890181/9a3e2b18-ee10-4e51-975d-0bb8cf6bfb3a)
-![Blank diagram (2)](https://github.com/LisaPowell1991/thrift-and-thrive/assets/122890181/fd1a3b3d-892b-4da7-9bb0-d009dc48714f)
-
+#### Step 1: Register
+![Blank diagram (3)](https://github.com/LisaPowell1991/thrift-and-thrive/assets/122890181/d2fd6ee7-6653-460d-9ae8-d1f41f849088)
+#### Step 2: Login so you can start posting items you want to sell
+![Blank diagram (4)](https://github.com/LisaPowell1991/thrift-and-thrive/assets/122890181/440f1000-0744-4541-b0af-491372769574)
+#### Step 3: Post item by completing the form with details of the product: 
+![Blank diagram (5)](https://github.com/LisaPowell1991/thrift-and-thrive/assets/122890181/0a58c8ae-5e88-4305-bd58-b2d380f8942f)
+#### Step 4: Check out your product and other product that is available with a search option:
+![Blank diagram (6)](https://github.com/LisaPowell1991/thrift-and-thrive/assets/122890181/70bf1aef-260e-4625-a703-7598edec2f46)
+#### Step 5: Click on the item you are intersted in, to get the seller details
+![Blank diagram (7)](https://github.com/LisaPowell1991/thrift-and-thrive/assets/122890181/40ba48da-2862-436d-8416-1d9bd4161d06)
 
 
 ## Contributing 🤝
-Contributions are welcome! My husband, Warren Kuyk, helped a lot with setting up the backend of Thrift and Thrive.
+My husband, Warren Kuyk, helped a lot with setting up the backend of Thrift and Thrive.
 
 ## Related Projects 🌐
 I took a lot of inspiration out of other websites like:
