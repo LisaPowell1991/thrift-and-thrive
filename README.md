@@ -18,7 +18,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-- Node.js
+- Node.js (version 12+)
 - Express
 - React
 - MySQL
@@ -41,6 +41,13 @@ These instructions will get you a copy of the project up and running on your loc
 1. npm run build
 2. Copy all dist files to public_html (or depending on the way your server is setup)
 3. npm run serve to start up MySQL and API
+
+### Potential issues ⚠️
+Depending on the environment, the npm run serve might have an issue, in that case:
+1. rm -rf node_modules
+2. rm package-lock.json
+3. run npm install again.
+This will ensure that node is catering for the relevant environment (windows / linux)
 
 ## Usage 🔍
 #### Step 1: Register
