@@ -29,13 +29,17 @@ These instructions will get you a copy of the project up and running on your loc
 **4. Start the frontend**
 ```npm run dev``` 
 
-### For Production ⌛:
+### For Production ⌛
 1. npm run build
 2. Copy all dist files to public_html (or depending on the way your server is setup)
 3. npm run serve to start up MySQL and API
 
-## Usage ℹ️
-- Describe how to use the application here...
+## Usage 🔍
+**Step 1: Register**
+![Blank diagram (1)](https://github.com/LisaPowell1991/thrift-and-thrive/assets/122890181/9a3e2b18-ee10-4e51-975d-0bb8cf6bfb3a)
+![Blank diagram (2)](https://github.com/LisaPowell1991/thrift-and-thrive/assets/122890181/fd1a3b3d-892b-4da7-9bb0-d009dc48714f)
+
+
 
 ## Contributing 🤝
 Contributions are welcome! My husband, Warren Kuyk, helped a lot with setting up the backend of Thrift and Thrive.
