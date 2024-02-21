@@ -9,7 +9,7 @@ Welcome to the Thrift and Thrive repository. This is a thrift shop application b
 - **Introduction:** So, why did I dive headfirst into the world of online thrifting? Well, let's just say I am a self-proclaimed "thrifter" extraordinaire. Well, it's simple really. As a self-proclaimed "thrifter" extraordinaire, I know the thrill of scoring fantastic second-hand finds that won't leave you penniless. Who needs to sacrifice an arm and a leg for quality when you can find hidden gems at bargain prices?
 You won't find any fancy carts or pesky payment points cluttering up your browsing experience. Nope, we keep it simple yet effective. Our platform serves as a meeting ground for buyers and sellers to connect directly, negotiate prices, and seal the deal.
 - **Deployed Site:** [Thrift and Thrive Deployed Site](http://34.201.68.14)
-- **Final Project Blog Article:** [Project Blog Article](https://example.com)
+- **Final Project Blog Article:** [Project Blog Article](https://medium.com/@lisapowell46/263a0f985a1e)
 - **Author(s) LinkedIn:** [Lisa LinkedIn](https://www.linkedin.com/in/lisa-powell-kuyk-5899561b3)
 
 ## Getting Started 🚀
